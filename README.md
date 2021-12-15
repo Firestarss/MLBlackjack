@@ -47,7 +47,9 @@ After simulating all episodes, the resulting Q-value function can be visualized.
 
 ![Q-value function after 100 episodes](media/nequals100000.png)
 
-As you can see, as the number of episodes goes up, the smoother the Q-value function gets and the more optimal the function gets as well.Another way to look at the data for the n = 100,000 graph is shown below.
+As you can see, as the number of episodes goes up, the smoother and more optimal the Q-value function gets. 
+
+Another way to look at the data for the n = 100,000 graph is shown below.
 
 ![Chart showing when to hit and when to stand](media/hitstandchart.png)
 
