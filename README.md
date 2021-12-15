@@ -65,11 +65,11 @@ After training our model, we wanted to be able to measure how effective our mode
 
 We then took our Q-value functions for n = 100, n = 1000, n = 100000, and n = 1000000 and compared them to the expected odds:
 
-|   Result   | Standard Odds |  n = 100 |  n = 1,000 |  n = 100,000 |
-|:----------:|:-------------:|:--------:|:----------:|:------------:|
-|   **Win**  |     42.22%    |  30.96%  |   41.16%   |    42.90%    |
-|  **Loss**  |     49.10%    |  63.62%  |   50.93%   |    48.89%    |
-|   **Tie**  |     8.48%     |   5.42%  |    7.91%   |     8.21%    |
+|  Result  | Standard Odds | n = 100 | n = 1,000 | n = 100,000 | n = 1,000,000 |
+|:--------:|:-------------:|:-------:|:---------:|:-----------:|:-------------:|
+|  **Win** |     42.22%    |  30.96% |   41.16%  |    42.90%   |     42.83%    |
+| **Loss** |     49.10%    |  63.62% |   50.93%  |    48.89%   |     48.95%    |
+|  **Tie** |     8.48%     |  5.42%  |   7.91%   |    8.21%    |     8.23%     |
 
 What we found out is that our implementation came incredibly close to the expected odds for the optimal way to play Blackjack.
 
