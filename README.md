@@ -47,3 +47,9 @@ After simulating all episodes, the resulting Q-value function can be visualized.
 
 ![Q-value function after 100 episodes](media/nequals100000.png)
 
+As you can see, as the number of episodes goes up, the smoother the Q-value function gets and the more optimal the function gets as well.Another way to look at the data for the n = 100,000 graph is shown below.
+
+![Chart showing when to hit and when to stand](media/hitstandchart.png)
+
+Like the graph above, this chart shows the optimal action for each state. The difference is that the 3D graph shows the ranges of Q-values and this chart just shows the optimal action. The top axis represents what card teh dealer is showing and the left axis represents the Player's hand total. For example, if the Player had a King and a 5 (total value of 15) and the Dealer was showing a 5, the Player would want to Hit.
+
