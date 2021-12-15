@@ -74,3 +74,8 @@ We then took our Q-value functions for n = 100, n = 1000, n = 100000, and n = 10
 What we found out is that our implementation came incredibly close to the expected odds for the optimal way to play Blackjack.
 
 One interesting observation that came out of this table is that, past a certain point, we would get increasingly diminishing returns. The differences in percentages between n = 100 and n = 1,000 are quite significant but the differences between n = 1,000 and n = 1,000,000 are almost negligible even though the difference in the number of episodes are several orders of magnitude larger than the first comparison. This means that, past a certain point, we would end up using more and more computational power for negligible differences in optimality.
+
+## Sources for this Project
+[Easy 21 Reinforcment Learning](https://towardsdatascience.com/playing-cards-with-reinforcement-learning-1-3-c2dbabcf1df0)
+[Simple Reinforcement Q-Learning](https://towardsdatascience.com/simple-reinforcement-learning-q-learning-fcddc4b6fe56)
+[Monte Carlo Methods](https://medium.com/analytics-vidhya/monte-carlo-methods-in-reinforcement-learning-part-1-on-policy-methods-1f004d59686a)
