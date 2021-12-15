@@ -53,5 +53,24 @@ Another way to look at the data for the n = 100,000 graph is shown below.
 
 ![Chart showing when to hit and when to stand](media/hitstandchart.png)
 
-Like the graph above, this chart shows the optimal action for each state. The difference is that the 3D graph shows the ranges of Q-values and this chart just shows the optimal action. The top axis represents what card teh dealer is showing and the left axis represents the Player's hand total. For example, if the Player had a King and a 5 (total value of 15) and the Dealer was showing a 5, the Player would want to Hit.
+Like the graph above, this chart shows the optimal action for each state. The difference is that the 3D graph shows the ranges of Q-values and this chart just shows the optimal action. The top axis represents what card the dealer is showing and the left axis represents the Player's hand total. For example, if the Player had a King and a 5 (total value of 15), and the Dealer was showing a 5, the Player would want to Hit.
 
+## Validating Our Model ##
+
+After training our model, we wanted to be able to measure how effective our model was. We looked up the expected percentages for the following metrics:
+
+  - Player Win (42.22%)
+  - Player Loss (49.10%)
+  - Player Tie (8.48%)
+
+We then took our Q-value functions for n = 100, n = 1000, n = 100000, and n = 1000000 and compared them to the expected odds:
+
+|   Result   | Standard Odds |  n = 100 |  n = 1,000 |  n = 100,000 |
+|:----------:|:-------------:|:--------:|:----------:|:------------:|
+|   **Win**  |     42.22%    |  30.96%  |   41.16%   |    42.90%    |
+|  **Loss**  |     49.10%    |  63.62%  |   50.93%   |    48.89%    |
+|   **Tie**  |     8.48%     |   5.42%  |    7.91%   |     8.21%    |
+
+What we found out is that our implementation came incredibly close to the expected odds for the optimal way to play Blackjack.
+
+One interesting observation that came out of this table is that, past a certain point, we would get increasingly diminishing returns. The differences between n = 100 and n = 1,000 are quite significant but the differences between n = 1,000 and n = 1,000,000 are almost negligible even though the difference is the number of episodes are several orders of magnitude larger than the first comparison. This means that, past a certain point, we would end up using more and more computational power for negligible differences in optimality.
